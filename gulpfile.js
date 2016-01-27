@@ -6,8 +6,8 @@ var panini   = require('panini');
 var rimraf   = require('rimraf');
 var sequence = require('run-sequence');
 var sherpa   = require('style-sherpa');
+var webpack  = require('webpack-stream');
 // var ghPages = require('gulp-gh-pages');
- 
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -53,7 +53,6 @@ var PATHS = {
     'bower_components/foundation-sites/js/foundation.tabs.js',
     'bower_components/foundation-sites/js/foundation.toggler.js',
     'bower_components/foundation-sites/js/foundation.tooltip.js',
-
     //
     'bower_components/waypoints/lib/jquery.waypoints.min.js',
     'vendor/Landio/js/plugins/jquery.vimeo.api.js',
@@ -67,8 +66,7 @@ var PATHS = {
       // 'vendor/animated-signup-flow/js/uiMorphingButton_inflow.js',
     // 'src/assets/js/**/*.js',
     'src/assets/js/app.js',
-      'src/assets/js/signup.js'
-
+    'src/assets/js/signup.js'
   ]
 };
 
@@ -166,6 +164,15 @@ gulp.task('javascript', function() {
     .pipe(gulp.dest('dist/assets/js'))
     .on('finish', browser.reload);
 });
+
+// Use Webpack
+gulp.task('Webpack', function() {
+  return gulp.src('src/assets/js/motion.js')
+    .pipe(webpack())
+    .pipe(gulp.dest('dist/'));
+});
+
+
 
 // Copy images to the "dist" folder
 // In production, the images are compressed
