@@ -1,0 +1,35 @@
+{{!-- 
+<!-- USE a build tool to grab the yml and convert to json-->
+<!-- Use json to dynamically build scripts FOReach PAGE -->
+<!-- This way we can ONLY load the difference between each page ? ? ? -->
+<!-- devDependencies should link to bower.json -->
+---
+devDependencies:
+  -
+    type: javascript
+    require:
+      -
+        jquery: npm jquery
+        videoJS: bower video.js
+
+  -
+    type: scss
+    import:
+      -
+        assets: scss/components/content.scss
+        settings: scss/theme/red.scss
+    devDependencies: 
+      video.js: "~5.6.0"
+      foundation-icons-4: "~3.0"
+
+---
+--}}
+<!--  -->
+
+<section class="section-video bg-inverse text-center wp wp-4">
+  <h3 class="sr-only">Video</h3>
+  <video id="demo_video" class="video-js vjs-default-skin vjs-big-play-centered" controls poster="assets/img/video-poster.jpg" data-setup='{}'>
+    <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+    <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
+  </video>
+</section>
