@@ -1,9 +1,9 @@
 // var gulp = require('gulp');
 // var testResponsive = require('gulp-responsive-images');
 // var responsive = require('gulp-responsive');
+
 // This file should be able to resize images dynamically
-//
-//
+
 
 gulp.task('interchange', function () {
   gulp.src('source/images/**/*')

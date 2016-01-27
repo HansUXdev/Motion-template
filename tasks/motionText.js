@@ -5,7 +5,7 @@
 // Solution: PREPROCESS
 
 // What this should do...
-// 1). Create a gulp plugin that accepts an array of class selectors.
+// 1). Create a gulp plugin that accepts an array of class selectors as INPUT.
 // 2). use cherrio.js or something similar to scrape the content in the selector
 // 3). find each word and wrap each in a span tag with a class of "word{i}"
 // 4). within each word find each character and wrap each in a span tag with a class of "chara{i}"

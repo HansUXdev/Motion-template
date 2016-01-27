@@ -17,6 +17,12 @@
     .button { border: 0; box-shadow: none; background: #257696; }
     .button:hover { background: #1b566d; }
   }
+  .medium-6{
+    @include breakpoint(large) {
+      margin-left: -7em;
+      margin-right: -7em;
+    }
+  }
 }
 
 

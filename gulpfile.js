@@ -6,7 +6,7 @@ var panini   = require('panini');
 var rimraf   = require('rimraf');
 var sequence = require('run-sequence');
 var sherpa   = require('style-sherpa');
-var ghPages = require('gulp-gh-pages');
+// var ghPages = require('gulp-gh-pages');
  
 
 // Check for --production flag
@@ -59,9 +59,9 @@ var PATHS = {
     'vendor/Landio/js/plugins/jquery.vimeo.api.js',
     'vendor/Landio/js/plugins/video.js',
     // ButtonComponentMorph/js/modernizr.custom.js',
-      // 'vendor/ButtonComponentMorph/js/classie.js',
-      // 'vendor/ButtonComponentMorph/js/uiMorphingButton_inflow.js',
-      // 'src/assets/js/morphing-newsletter.js',
+      'vendor/ButtonComponentMorph/js/classie.js',
+      'vendor/ButtonComponentMorph/js/uiMorphingButton_inflow.js',
+      'src/assets/js/morphing-newsletter.js',
     // animated-signup-flow
       'vendor/animated-signup-flow/js/velocity.min.js',
       // 'vendor/animated-signup-flow/js/uiMorphingButton_inflow.js',
@@ -73,10 +73,10 @@ var PATHS = {
 };
 
 
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/**/*')
-    .pipe(ghPages());
-});
+// gulp.task('deploy', function() {
+//   return gulp.src('./dist/**/**/*')
+//     .pipe(ghPages());
+// });
 
 // Delete the "dist" folder
 // This happens every time a build starts
