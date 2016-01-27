@@ -6,9 +6,6 @@
   "scripts": {
     "start": "gulp",
     "rebuild": "npm rebuild node-sass",
-    "mac-interchange": "brew install graphicsmagick && npm install --save-dev gulp-responsive-images && gulp-interchange",
-    "linux-interchange": "apt-get install graphicsmagick && npm install --save-dev gulp-responsive-images && gulp-interchange",
-    "sharp": "npm install -g node-gyp && npm install sharp",
     "build": "gulp build --production"
   },
   "author": "HANS ",
@@ -37,10 +34,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/HansUXdev/Motion-template.git"
-  },
-  "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
   },
   "private": true
 }

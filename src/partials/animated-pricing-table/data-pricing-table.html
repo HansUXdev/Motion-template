@@ -70,18 +70,22 @@
         <legend class="">Payment Method</legend>
         <div>
           <ul class="cd-payment-gateways">
-            <li>
-              <input type="radio" name="payment-method" id="paypal" value="paypal">
-              <label for="paypal">Paypal</label>
-            </li>
-            <li>
-              <input type="radio" name="payment-method" id="card" value="card" checked>
+            <div class="row">
+              <div class="column medium-6">
+                <input type="radio" name="payment-method" id="paypal" value="paypal">
+                <label for="paypal">Paypal</label>
+              </div>
+              <div class="column medium-6">
+                <input type="radio" name="payment-method" id="card" value="card" checked>
               <label for="card">Card</label>
-            </li>
+              </div>
+            </div>
           </ul> 
           <!-- .cd-payment-gateways -->
         </div>
         
+        <div class="cd-paypal"></div>
+
         <div class="cd-credit-card">
           <div>
             <p class="half-width">

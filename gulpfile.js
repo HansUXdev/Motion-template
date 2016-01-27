@@ -6,6 +6,8 @@ var panini   = require('panini');
 var rimraf   = require('rimraf');
 var sequence = require('run-sequence');
 var sherpa   = require('style-sherpa');
+var ghPages = require('gulp-gh-pages');
+ 
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -20,11 +22,7 @@ var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
 var PATHS = {
   assets: [
     'src/assets/**/*',
-<<<<<<< Updated upstream
-    '!src/assets/{img,js,scss}/**/*'
-=======
     '!src/assets/{!img,scss}/**/*'
->>>>>>> Stashed changes
   ],
   sass: [
     'bower_components/foundation-sites/scss',
@@ -55,10 +53,7 @@ var PATHS = {
     'bower_components/foundation-sites/js/foundation.tabs.js',
     'bower_components/foundation-sites/js/foundation.toggler.js',
     'bower_components/foundation-sites/js/foundation.tooltip.js',
-<<<<<<< Updated upstream
-    'src/assets/js/**/!(app).js',
-    'src/assets/js/app.js'
-=======
+
     //
     'bower_components/waypoints/lib/jquery.waypoints.min.js',
     'vendor/Landio/js/plugins/jquery.vimeo.api.js',
@@ -73,9 +68,15 @@ var PATHS = {
     // 'src/assets/js/**/*.js',
     'src/assets/js/app.js',
       'src/assets/js/signup.js'
->>>>>>> Stashed changes
+
   ]
 };
+
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/**/*')
+    .pipe(ghPages());
+});
 
 // Delete the "dist" folder
 // This happens every time a build starts

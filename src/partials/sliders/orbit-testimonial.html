@@ -1,0 +1,26 @@
+<style>
+	.testimonial-carousel{
+		background: #000;
+		min-height: 300px;
+	}
+	.color-white{color: #fff;}
+
+</style>
+
+{{#each testimonial-carousel}}
+<div class="orbit testimonial-carousel" role="region" aria-label="Favorite Space Pictures" data-orbit>
+	<ul class="orbit-container">
+		<button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
+		<button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+		<li class="orbit-slide is-active">
+			<h2 class="text-center color-white">{{active-testimonial}}</h2>
+		</li>
+		{{#each slider-content}}
+		<li class="orbit-slide">
+			<h2 class="text-center color-white">{{content}}</h2>
+		</li>
+		{{/each}}
+	</ul>
+
+</div>
+{{/each}}

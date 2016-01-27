@@ -1,4 +1,23 @@
+<!-- just slowly testing this idea out... -->
+<!-- yml to json conversion should be for two-way data binding between the front end and a cms for quick edits -->
+<!-- this could allow designers who like to code (like me) to integrate raw html-->
 ---
+testimonial-carousel:
+  -
+    active-testimonial: HELLO
+    slider-content:
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        feature: I am {{name}} and these people were awesome
+        name: this person
 data-pricing-table:
   -
     title: Basic
@@ -50,6 +69,13 @@ data-pricing-table:
         availability: fi-check
 ---
 
+{{>content-bgvideo}}
+
+{{>orbit-testimonial}}
+<div class="pricing-table-container">
+  {{>data-pricing-table}}
+</div>
+
 <div class="col-3-container">
   <div class="row">
 
@@ -82,77 +108,7 @@ data-pricing-table:
         <p class="service-description">It has been a very busy few months for the Project Voyager team.</p>
       </div>
     </div>
-<<<<<<< Updated upstream
-    
-    <hr />
-            
-    <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-    <form>
-      <div class="row">
-        <div class="large-12 columns">
-          <label>Input Label</label>
-          <input type="text" placeholder="large-12.columns" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-4 medium-4 columns">
-          <label>Input Label</label>
-          <input type="text" placeholder="large-4.columns" />
-        </div>
-        <div class="large-4 medium-4 columns">
-          <label>Input Label</label>
-          <input type="text" placeholder="large-4.columns" />
-        </div>
-        <div class="large-4 medium-4 columns">
-          <div class="row collapse">
-            <label>Input Label</label>
-            <div class="input-group">
-              <input class="input-group-field" type="text" placeholder="input-group" />
-              <span class="input-group-label">.com</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-12 columns">
-          <label>Select Box</label>
-          <select>
-            <option value="husker">Husker</option>
-            <option value="starbuck">Starbuck</option>
-            <option value="hotdog">Hot Dog</option>
-            <option value="apollo">Apollo</option>
-          </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-6 medium-6 columns">
-          <label>Choose Your Favorite</label>
-          <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-          <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-        </div>
-        <div class="large-6 medium-6 columns">
-          <label>Check these out</label>
-          <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-          <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-12 columns">
-          <label>Textarea Label</label>
-          <textarea placeholder="small-12.columns"></textarea>
-        </div>
-      </div>
-    </form>
-  </div>     
-=======
->>>>>>> Stashed changes
+
 
   </div>
-</div>
-
-{{>content-bgvideo}}
-
-<div class="row bg-color"></div>
-<div class="pricing-table-container">
-  {{>data-pricing-table}}
 </div>
