@@ -1,21 +1,49 @@
 {{!-- This is the base layout for your project, and will be used on every page. --}}
 
 <!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="{{root}}assets/css/app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
-    <script src="{{root}}assets/js/modernizr.custom.js"></script>
-  </head>
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en" >
+   <![endif]-->
+   <!--[if gt IE 8]><!-->
+   <html class="no-js" lang="en" >
+      <!--<![endif]-->
+      <head>
+         <!-- title and meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foundation for Sites</title>
+         
+         <!-- Foundation 3 for IE 8 and earlier -->
+         <!--[if lt IE 9]>
+         <link rel="stylesheet" href="ie8/css/app.css">
+         <link rel="stylesheet" href="ie8/css/normalize.css">
+         <link rel="stylesheet" href="ie8/css/foundation.min.css">
+         <![endif]-->
+         <!-- Foundation 5 for IE 9 and earlier -->
+         <!--[if gt IE 8]><!-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.css">
+         <!--<![endif]-->
+
+        <link rel="stylesheet" href="{{root}}assets/css/app.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+
+        <script src="{{root}}assets/js/modernizr.custom.js"></script>
+      </head>
   <body>
 
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{> body}}
-
+         <!-- Foundation 3 for IE 8 and earlier -->
+         <!--[if lt IE 9]>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+         <script src="ie8/scripts/app.js"></script>
+         <![endif]-->
+         <!-- Foundation 4 for IE 9 and later -->
+         <!--[if gt IE 8]><!-->
     <script src="{{root}}assets/js/app.js"></script>
+    
   </body>
 </html>
