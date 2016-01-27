@@ -58,7 +58,7 @@ var PATHS = {
     'vendor/Landio/js/plugins/jquery.vimeo.api.js',
     'vendor/Landio/js/plugins/video.js',
     // ButtonComponentMorph/js/modernizr.custom.js',
-      'vendor/ButtonComponentMorph/js/classie.js',
+      'bower_components/classie/classie.js',
       'vendor/ButtonComponentMorph/js/uiMorphingButton_inflow.js',
       'src/assets/js/morphing-newsletter.js',
     // animated-signup-flow
