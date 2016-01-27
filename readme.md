@@ -1,17 +1,27 @@
 # MotionSickNess Template
-
-## Under Development
-
 This template is built off the shoulders off gaints. I just refactored the code to clean it up.
 - Handlebars HTML templates with Panini
 - Sass compilation and prefixing
 - JavaScript concatenation
 - Image Optimination tasks for interchange (requires mac)
 - Built-in BrowserSync server
+
+## Under Development 
+(Code being refactored, themed or otherwise rewritten)
 - Custom Components:
-  - Animated Pricing Table 
-  - Morphing Button (Newletter Signup)
-  - Background video player
+  - Animated Pricing Table (based on codrops)
+  - Morphing Buttons (based codrops)
+  - Background video player 
+  - Input Effect (based on codrops)
+  	- icons (Fumi, Kohana)
+  	- Makiko (search)
+  - Animated Checkboxes and Radio Buttons
+  - Text Animations
+  - Navigation Patterns (mostly done).
+
+
+
+
 
 ## Installation
 
