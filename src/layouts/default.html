@@ -44,6 +44,11 @@
   <body>
 
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+
+    {{#ifpage 'index'}}
+      <!-- <p>This is definitely the Index page.</p> -->
+    {{/ifpage}}
+
     {{> body}}
          <!-- Foundation 3 for IE 8 and earlier -->
          <!--[if lt IE 9]>

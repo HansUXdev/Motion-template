@@ -288,6 +288,10 @@ Form elements in Foundation are styled based on their type attribute rather than
 
 ## Form Example
 
+<h1>Icons</h1>
+<h2>Fumi</h2>
+<h2>Kohana</h2>
+
 ```html_example
 <form>
   <div class="row">

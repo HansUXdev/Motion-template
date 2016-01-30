@@ -1,0 +1,84 @@
+///
+/// @Settings
+///
+//
+/// Description
+// Every effect is composed of 
+// 1). container with class of the effect-type
+// 2). input with class of the effect-type
+// 3). label with class of the effect-type
+// 	  a). i.icon-classes
+// 	  b). span.classes - this will 
+
+
+$icon-effect-name: kohana;
+
+
+
+
+
+
+@mixin icon-effect{
+	.input--#{$icon-effect-name} {
+		overflow: hidden;
+		background: #fff;
+	}
+
+	.input__field--#{$icon-effect-name} {
+		width: 100%;
+		background: transparent;
+		padding-left: 2.75em;
+		color: #6a7989;
+	}
+
+	.input__label--#{$icon-effect-name} {
+		position: absolute;
+		width: 100%;
+		text-align: left;
+		pointer-events: none;
+		color: #D2D2D2;
+	}
+
+	.input__label-content--#{$icon-effect-name} {
+		display: inline-block;
+		width: auto;
+		-webkit-transform: translate3d(-1.75em, 0, 0);
+		transform: translate3d(-1.75em, 0, 0);
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+		transition: transform 0.3s, opacity 0.3s;
+	}
+
+	.icon--#{$icon-effect-name} {
+		display: inline-block;
+		margin-top: 0.9em;
+		-webkit-transform: translate3d(-2em, 0, 0);
+		transform: translate3d(-2em, 0, 0);
+		-webkit-transition: -webkit-transform 0.3s;
+		transition: transform 0.3s;
+	}
+
+	.input__field--#{$icon-effect-name}:focus + .input__label--#{$icon-effect-name} .input__label-content--#{$icon-effect-name},
+	.input--filled .input__label-content--#{$icon-effect-name} {
+		opacity: 0;
+		-webkit-transform: translate3d(100px, 0, 0);
+		transform: translate3d(100px, 0, 0);
+	}
+
+	.input__label-content--#{$icon-effect-name},
+	.icon--#{$icon-effect-name},
+	.input__field--#{$icon-effect-name}:focus + .input__label--#{$icon-effect-name} .input__label-content--#{$icon-effect-name},
+	.input--filled .input__label-content--#{$icon-effect-name} {
+		-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+		transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	}
+
+	.input__field--#{$icon-effect-name}:focus + .input__label--#{$icon-effect-name} .icon--#{$icon-effect-name},
+	.input--filled  .icon--#{$icon-effect-name} {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+
+
+
+}
