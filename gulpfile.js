@@ -54,6 +54,7 @@ var PATHS = {
     'bower_components/foundation-sites/js/foundation.toggler.js',
     'bower_components/foundation-sites/js/foundation.tooltip.js',
     //
+    'bower_components/cta/dist/cta.min.js',
     'bower_components/waypoints/lib/jquery.waypoints.min.js',
     'vendor/Landio/js/plugins/jquery.vimeo.api.js',
     'vendor/Landio/js/plugins/video.js',

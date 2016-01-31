@@ -24,6 +24,7 @@
     "video.js": "~5.6.0",
     "classie": "~1.0.1",
     "velocity": "~1.2.3",
-    "animate-sass": "~0.6.4"
+    "animate-sass": "~0.6.4",
+    "cta": "~0.3.2"
   }
 }

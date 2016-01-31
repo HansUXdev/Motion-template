@@ -34,7 +34,7 @@ $(document).foundation();
 
   function init() {
     onScrollAnimations();
-    htmlVideo();
+    // htmlVideo();
   }
 
   init();
