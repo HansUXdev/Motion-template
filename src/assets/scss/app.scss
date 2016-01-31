@@ -58,7 +58,33 @@
 
 @import 'components/input-effects/demo';
 
-@import 'components/input-effects/demo';
+@import 'components/motion/animate';
+@include breakpoint(medium up) {
+  .wp {
+    visibility: hidden;
+  }
+
+  .wp-2 {
+    animation-delay: .1s;
+  }
+
+  .wp-3,
+  .wp-8 {
+    animation-delay: .2s;
+  }
+
+  .wp-5,
+  .wp-6 {
+    animation-timing-function: cubic-bezier(.2, 1, .3, 1);
+    animation-delay: .3s;
+  }
+
+  .wp.animated {
+    visibility: visible;
+  }
+}
+
+
 
 
 @import 'pages/home';
