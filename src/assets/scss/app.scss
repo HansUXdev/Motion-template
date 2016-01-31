@@ -47,16 +47,18 @@
 
 
 @import 'components/morphing-newsletter';
+@import 'components/forms/form';
 
 @import 'bourbon-lib/bourbon';
 
-@import 'components/animated-signup-rewrite';
+
+
 
 @import 'components/col-3-service';
 @import 'components/bgvideo-section';
 
-
-@import 'components/input-effects/demo';
+@import 'components/animated-signup-rewrite';
+// @import 'components/input-effects/demo';
 
 @import 'components/motion/animate';
 // @import 'components/motion/image-slider';
@@ -91,4 +93,7 @@
 
 @import 'pages/home';
 @import 'font/icomoon';
+
+@import 'vendor/flexslider';
+
 

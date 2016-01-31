@@ -37,6 +37,7 @@
         <link rel="stylesheet" href="assets/css/app.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css">
 
         <script src="assets/js/modernizr.custom.js"></script>
       </head>
@@ -278,11 +279,13 @@
     
     <div id="newsletter">
        <div class="row">
-          <div class="medium-6 columns">
+          <div class="small-6 small-centered columns">
              <h5>Stay on top of <a href="http://zurb.com/responsive">responsive design</a>.</h5>
              <p>Sign up to receive monthly <a href="http://zurb.com/responsive/reading">Responsive Reading</a> highlights.</p>
           </div>
-          <div class="medium-6 columns">
+       </div>    
+       <div class="row">     
+          <div class="small-10 small-centered columns">
             <div class="mockup-content">
               <div class="morph-button morph-button-inflow morph-button-inflow-1">
                 <button type="button"><span>Subscribe to our Newsletter</span></button>
@@ -293,10 +296,17 @@
                       Subscribe 
                       <!-- to our Newsletter -->
                       </h2>
-                      <form>
-                        <p style="color:#000;"><label>Your Email Address</label><input type="text"/><span>We promise, we won't send you any spam. Just love.</span></p>
+                      <form class="signup-form">
+                        <div class="form-input-group">
+                            <i class="fa fa-envelope"></i><input type="text" class="" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-input-group">
+                            <i class="fa fa-lock"></i><input type="text" class="" placeholder="Enter your password" required>
+                        </div>
+                        <!-- <p style="color:#000;"><label>Your Email Address</label><input type="text"/><span>We promise, we won't send you any spam. Just love.</span></p> -->
                         <p><button>Subscribe me</button></p>
                       </form>
+    
                     </div>
                   </div>
                 </div>
@@ -304,7 +314,9 @@
               <!-- morph-button -->
             </div>
           </div>
-       </div>
+       </div>  
+    
+    
     </div>
     
     
@@ -344,6 +356,111 @@
     
       </div>
     </div>
+    
+    
+    <section class="testimonial-slider section-padding text-center">
+        <div class="container">
+            <div class="row">
+                <div class="medium-12 columns">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <!-- http://tympanus.net/Freebies/Sedna/img/avatar.jpg -->
+                                <div class="avatar"><img src="assets/img/scarf-girl.jpeg" alt="Sedna Testimonial Avatar" style="height:82px;"></div>
+                                <h2>"Lorem ipsum dolor sit amet, nullam lucia nisi."</h2>
+                                <p class="author">Peter Finlan, Product Designer.</p>
+                            </li>
+                            <li>
+                                <div class="avatar"><img src="assets/img/field-girl.jpeg" alt="Sedna Testimonial Avatar" style="height:82px;"></div>
+                                <h2>"Nunc vel maximus purus. Nullam ac urna ornare."</h2>
+                                <p class="author">Manoela Ilic, Founder @ Codrops.</p>
+                            </li>
+                            <li>
+                                <div class="avatar"><img src="assets/img/scarf-girl2.jpeg" alt="Sedna Testimonial Avatar" style="height:82px;"></div>
+                                <h2>"Nullam ac urna ornare, ultrices nisl ut, lacinia nisi."</h2>
+                                <p class="author">Blaz Robar, Pixel Guru</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    <div class="location-row row full-row">
+      <div class="quad bg-light">
+        <p class="location white-txt text-center ">this</p>
+        <p class="address text-center white-txt">this</p>
+        <p class="phone white-txt text-center">000.000.0000</p>
+      </div>
+      <div class="quad bg-dark">
+        <p class="location white-txt text-center ">this</p>
+        <p class="address text-center white-txt">this</p>
+        <p class="phone white-txt text-center">000.000.0000</p>
+      </div>
+      <div class="quad bg-mid">
+        <p class="location white-txt text-center ">this</p>
+        <p class="address text-center white-txt">this</p>
+        <p class="phone white-txt text-center">000.000.0000</p>
+      </div>
+      <div class="quad bg-light">
+        <p class="location white-txt text-center ">this</p>
+        <p class="address text-center white-txt">this</p>
+        <p class="phone white-txt text-center">000.000.0000</p>
+      </div>
+    </div>
+    
+    
+    <div class="row full-row history-row">
+      <p class="text-center small-3 small-centered columns white-txt">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+    </div>
+    
+    <div class="row full-row bg-image-2">
+      <p class="text-center small-3 small-centered columns white-txt text-menu">MENU</p>
+    </div>
+    
+    
+    <div class="location-row row full-row">
+      <div class="quad bg-dark">
+        <p href="#" class="text-center white-txt quad-text">OUR STORY</p>
+      </div>
+      <div class="quad bg-pink">
+        <p href="#" class="text-center white-txt quad-text">LOCATIONS</p>
+      </div>
+      <div class="quad bg-white">
+        <p href="#" class="text-center quad-text">TAKEAWAY</p>
+      </div>
+      <div class="quad bg-mid">
+        <p href="#" class="text-center white-txt quad-text">CATERING</p>
+      </div>
+    </div>
+    
+    <div class="row join-cta">
+      <div class="row">
+        <h2 class="title-cta">JOIN lorem ipsum </h2>
+      </div>
+      <div class="row">
+        <p class=" description-cta">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+        <div class="social-icons-row">
+          <a href="" class="round-icons"><i class="fi-social-twiiter large-icon"></i></a>
+          <a href="" class="round-icons"><i class="fi-social-instagram large-icon"></i></a>
+          <a href="" class="round-icons"><i class="fi-social-facebook large-icon"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
          <!-- Foundation 3 for IE 8 and earlier -->
          <!--[if lt IE 9]>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>

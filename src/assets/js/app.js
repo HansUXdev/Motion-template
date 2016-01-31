@@ -44,6 +44,12 @@ $(document).foundation();
       offset: '60%'
     });
   }
+  // Requires flexslider
+  function flexsliderPlugin(){
+    $('.flexslider').flexslider({
+      animation: "slide"
+    });
+  }
 
   function htmlVideo() {
     videojs("demo_video", {
@@ -69,6 +75,7 @@ $(document).foundation();
 
   function init() {
     onScrollAnimations();
+    flexsliderPlugin();
     // htmlVideo();
   }
 

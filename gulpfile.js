@@ -45,7 +45,8 @@ var PATHS = {
     'bower_components/foundation-sites/js/foundation.interchange.js',
     'bower_components/foundation-sites/js/foundation.magellan.js',
     'bower_components/foundation-sites/js/foundation.offcanvas.js',
-    'bower_components/foundation-sites/js/foundation.orbit.js',
+    // Yeah... I'm just going to get rid of this...
+    // 'bower_components/foundation-sites/js/foundation.orbit.js',
     'bower_components/foundation-sites/js/foundation.responsiveMenu.js',
     'bower_components/foundation-sites/js/foundation.responsiveToggle.js',
     'bower_components/foundation-sites/js/foundation.reveal.js',
@@ -57,6 +58,8 @@ var PATHS = {
     //
     'bower_components/cta/dist/cta.min.js',
     'bower_components/waypoints/lib/jquery.waypoints.min.js',
+    'bower_components/flexslider/jquery.flexslider-min.js',
+    
     'vendor/Landio/js/plugins/jquery.vimeo.api.js',
     'vendor/Landio/js/plugins/video.js',
     // ButtonComponentMorph/js/modernizr.custom.js',
@@ -65,7 +68,6 @@ var PATHS = {
       'src/assets/js/morphing-newsletter.js',
     // animated-signup-flow
       'vendor/animated-signup-flow/js/velocity.min.js',
-      // 'vendor/animated-signup-flow/js/uiMorphingButton_inflow.js',
     // 'src/assets/js/**/*.js',
     'src/assets/js/app.js',
     'src/assets/js/signup.js'

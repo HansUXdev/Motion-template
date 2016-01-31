@@ -1,10 +1,12 @@
 <div id="newsletter">
    <div class="row">
-      <div class="medium-6 columns">
+      <div class="small-6 small-centered columns">
          <h5>Stay on top of <a href="http://zurb.com/responsive">responsive design</a>.</h5>
          <p>Sign up to receive monthly <a href="http://zurb.com/responsive/reading">Responsive Reading</a> highlights.</p>
       </div>
-      <div class="medium-6 columns">
+   </div>    
+   <div class="row">     
+      <div class="small-10 small-centered columns">
         <div class="mockup-content">
           <div class="morph-button morph-button-inflow morph-button-inflow-1">
             <button type="button"><span>Subscribe to our Newsletter</span></button>
@@ -15,10 +17,17 @@
                   Subscribe 
                   <!-- to our Newsletter -->
                   </h2>
-                  <form>
-                    <p style="color:#000;"><label>Your Email Address</label><input type="text"/><span>We promise, we won't send you any spam. Just love.</span></p>
+                  <form class="signup-form">
+                    <div class="form-input-group">
+                        <i class="fa fa-envelope"></i><input type="text" class="" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-input-group">
+                        <i class="fa fa-lock"></i><input type="text" class="" placeholder="Enter your password" required>
+                    </div>
+                    <!-- <p style="color:#000;"><label>Your Email Address</label><input type="text"/><span>We promise, we won't send you any spam. Just love.</span></p> -->
                     <p><button>Subscribe me</button></p>
                   </form>
+
                 </div>
               </div>
             </div>
@@ -26,5 +35,7 @@
           <!-- morph-button -->
         </div>
       </div>
-   </div>
+   </div>  
+
+
 </div>

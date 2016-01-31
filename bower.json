@@ -25,6 +25,8 @@
     "classie": "~1.0.1",
     "velocity": "~1.2.3",
     "animate-sass": "~0.6.4",
-    "cta": "~0.3.2"
+    "cta": "~0.3.2",
+    "flexslider": "FlexSlider#~2.6.0",
+    "fancyBox": "~2.1.5"
   }
 }
