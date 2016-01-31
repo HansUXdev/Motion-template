@@ -170,8 +170,8 @@ gulp.task('javascript', function() {
 });
 
 // Use Webpack
-gulp.task('Webpack', function() {
-  return gulp.src('src/assets/js/motion.js')
+gulp.task('webpack', function() {
+  return gulp.src('src/assets/js/home.js')
     .pipe(webpack())
     .pipe(gulp.dest('dist/'));
 });
