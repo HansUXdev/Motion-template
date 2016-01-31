@@ -1,0 +1,67 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <script src="{{root}}assets/js/modernizr.custom.js"></script>
+  </head>
+{{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+<body >
+<div class="off-canvas-wrapper">
+  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+    <div class="off-canvas position-right" id="off-canvas" data-off-canvas data-position="right">
+      {{>offcanvas-list}}
+    </div>
+    <div class="off-canvas-content" data-off-canvas-content >
+      <header class="header" role="banner">
+        <!-- This navs will be applied to the topbar, above all content 
+          To see additional nav styles, visit the /parts directory -->
+        <!-- By default, this menu will use off-canvas for small
+          and a topbar for medium-up -->
+        <div class="top-bar" id="top-bar-menu">
+          <div class="top-bar-left float-left">
+            <ul class="menu">
+              <li class="menu-text">{{title}}</li>
+            </ul>
+          </div>
+          <div class="top-bar-right show-for-medium">
+            {{>topbar-list}}
+          </div>
+
+          <div class="top-bar-right float-right show-for-small-only">
+            <ul class="menu">
+              <!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
+              <li><a data-toggle="off-canvas">Menu</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </header>
+      <!-- end .header -->      
+      <div id="content">
+        <div id="inner-content" class="">
+          {{> body}}
+        </div>
+        <!-- end #inner-content -->
+      </div>
+      <!-- end #content -->
+
+    </div>
+    <!-- end .main-content -->
+  </div>
+  <!-- end .off-canvas-wrapper-inner -->
+</div>
+    <!-- end .off-canvas-wrapper -->
+    <script src="{{root}}assets/js/app.js"></script>
+   <!-- end page -->
+</body>
+
+
+
+
+</html>

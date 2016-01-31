@@ -1,0 +1,35 @@
+<ul id="menu-main" class="vertical menu" data-accordion-menu>
+  <li class="menu-item"><a href="#">Foundation Features</a></li>
+  <li class="menu-item menu-item-has-children">
+    <a href="#">Zurb Templates</a>
+    <ul class="vertical nested menu">
+      {{#each zurb-templates}}
+      <li class="menu-item">
+        <a href="{{url}}" class="text-center" style="line-height: 2;"> 
+          {{text}} 
+
+          <img class="thumbnail" src="{{img}}">
+        </a>
+        <!-- <div class="row column">
+            <br> -->
+            <!-- "http://placehold.it/550x350 -->
+        <!-- </div> -->
+      </li>
+      {{/each}}
+    </ul>
+  </li>
+  <li class="menu-item current-menu-ancestor current-menu-parent menu-item-has-children ">
+    <a href="#">Navigation Options</a>
+    <ul class="vertical nested menu">
+      <li class="menu-item"><a href="#">Top Bar Navigation</a></li>
+      <li class="menu-item"><a href="#">Offcanvas Navigation</a></li>
+    </ul>
+  </li>
+  <li class="menu-item menu-item-has-children ">
+    <a href="#">Extras</a>
+    <ul class="vertical nested menu">
+      <li class="menu-item "><a href="#">Gravity Forms</a></li>
+    </ul>
+  </li>
+  <li class="menu-item "><a href="https://github.com/HansUXdev/Zurb-Theme">Download</a></li>
+</ul>

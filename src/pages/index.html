@@ -1,19 +1,98 @@
+<!-- just slowly testing this idea out... -->
+<!-- yml to json conversion should be for two-way data binding between the front end and a cms for quick edits -->
+<!-- this could allow designers who like to code (like me) to integrate raw html-->
+---
+testimonial-carousel:
+  -
+    active-testimonial: HELLO
+    slider-content:
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        feature: I am {{name}} and these people were awesome
+        name: this person
+data-pricing-table:
+  -
+    title: Basic
+    price: $9.99
+    animation: wp wp-5
+    features:
+      -
+        feature: Feature 1
+        availability: fi-check
+      -
+        feature: Feature 2
+        availability: fi-x
+      -
+        feature: Feature 3
+        availability: fi-x
+      -
+        feature: Feature 4
+        availability: fi-x
+  -
+    title: Popular
+    price: $19.99
+    animation: none
+    features:
+      -
+        feature: Feature 1
+        availability: fi-check
+      -
+        feature: Feature 2
+        availability: fi-check
+      -
+        feature: Feature 3
+        availability: fi-x
+      -
+        feature: Feature 4
+        availability: fi-x
+  -
+    title: Premier
+    price: $29.99
+    animation: wp wp-6
+    features:
+      -
+        feature: Feature 1
+        availability: fi-check
+      -
+        feature: Feature 2
+        availability: fi-check
+      -
+        feature: Feature 3
+        availability: fi-check
+      -
+        feature: Feature 4
+        availability: fi-check
 ---
 
----
+{{>pricing-table}}
+
+{{>morphing-newsletter}}
+
+{{>content-3col-hover}}
+
+{{>testimonial-slider}}
+
+{{>content-locations}}
+
+{{>content-history}}
+
+{{>content-bg-img}}
+
+{{>location-footer}}
 
 
 
 
 
-{{content-locations}}
 
-{{content-history}}
-
-{{content-bg-img}}
-
-
-{{location-footer}}
 
 
 

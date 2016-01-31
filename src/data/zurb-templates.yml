@@ -1,0 +1,24 @@
+  - text: News
+    url: news.html
+    img: assets/img/f6-template-news-mag.svg
+  - text: Real Estate
+    url: real-estate.html
+    img: assets/img/f6-template-realestate.svg
+  - text: Ecommerce
+    url: ecommerce.html
+    img: assets/img/foundation6-templates-ecommerce.svg
+  - text: Agency
+    url: agency.html
+    img: assets/img/foundation6-templates-agency.svg
+  - text: Blog Sidebar
+    url: blog.html
+    img: assets/img/foundation6-templates-blog-sidebar.svg
+  - text: Blog Column
+    url: blog-column.html
+    img: assets/img/foundation6-templates-blog-column.svg
+  - text: Portfolio
+    url: portfolio.html
+    img: assets/img/foundation6-templates-portfolio.svg
+  - text: Product Page
+    url: product-page.html
+    img: assets/img/foundation6-templates-product-page.svg
