@@ -59,6 +59,8 @@
 @import 'components/input-effects/demo';
 
 @import 'components/motion/animate';
+// @import 'components/motion/image-slider';
+
 @include breakpoint(medium up) {
   .wp {
     visibility: hidden;
@@ -88,5 +90,5 @@
 
 
 @import 'pages/home';
-
+@import 'font/icomoon';
 

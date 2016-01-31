@@ -22,6 +22,7 @@ var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
 var PATHS = {
   assets: [
     'src/assets/**/*',
+    'src/assets/css/fonts/**/*',
     '!src/assets/{!img,scss}/**/*'
   ],
   sass: [
