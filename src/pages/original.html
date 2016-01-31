@@ -1,0 +1,116 @@
+<!-- just slowly testing this idea out... -->
+<!-- yml to json conversion should be for two-way data binding between the front end and a cms for quick edits -->
+<!-- this could allow designers who like to code (like me) to integrate raw html-->
+---
+testimonial-carousel:
+  -
+    active-testimonial: HELLO
+    slider-content:
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        feature: I am {{name}} and these people were awesome
+        name: this person
+data-pricing-table:
+  -
+    title: Basic
+    price: $9.99
+    features:
+      -
+        feature: Feature 1
+        availability: fi-check
+      -
+        feature: Feature 2
+        availability: fi-x
+      -
+        feature: Feature 3
+        availability: fi-x
+      -
+        feature: Feature 4
+        availability: fi-x
+  -
+    title: Popular
+    price: $19.99
+    features:
+      -
+        feature: Feature 1
+        availability: fi-check
+      -
+        feature: Feature 2
+        availability: fi-check
+      -
+        feature: Feature 3
+        availability: fi-x
+      -
+        feature: Feature 4
+        availability: fi-x
+  -
+    title: Premier
+    price: $29.99
+    features:
+      -
+        feature: Feature 1
+        availability: fi-check
+      -
+        feature: Feature 2
+        availability: fi-check
+      -
+        feature: Feature 3
+        availability: fi-check
+      -
+        feature: Feature 4
+        availability: fi-check
+---
+
+{{>content-bgvideo}}
+
+
+<div class="pricing-table-container row">
+  {{>data-pricing-table}}
+</div>
+
+{{>morphing-newsletter}}
+
+<div class="col-3-container">
+  <div class="row">
+
+    <div class="columns medium-4 col-left">
+      <div class="service">
+        <div class="service-icon-box">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/SpaceX_CRS-3.png/360px-SpaceX_CRS-3.png" alt="" class="service-icon">
+        </div>
+        <h4 class="service-heading">Interstellar Travel</h4>
+        <p class="service-description">It has been a very busy few months for the Project Voyager team.</p>
+      </div>
+    </div>
+
+    <div class="columns medium-4 col-mid">
+      <div class="service">
+        <div class="service-icon-box">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/SpaceX_CRS-3.png/360px-SpaceX_CRS-3.png" alt="" class="service-icon">
+        </div>
+        <h4 class="service-heading">Interstellar Travel</h4>
+        <p class="service-description">It has been a very busy few months for the Project Voyager team.</p>
+      </div>
+    </div>
+
+    <div class="columns medium-4 col-right">
+      <div class="service">
+        <div class="service-icon-box">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/SpaceX_CRS-3.png/360px-SpaceX_CRS-3.png" alt="" class="service-icon">
+        </div>
+        <h4 class="service-heading">Interstellar Travel</h4>
+        <p class="service-description">It has been a very busy few months for the Project Voyager team.</p>
+      </div>
+    </div>
+
+
+  </div>
+</div>

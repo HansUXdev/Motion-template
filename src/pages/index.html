@@ -1,116 +1,81 @@
-<!-- just slowly testing this idea out... -->
-<!-- yml to json conversion should be for two-way data binding between the front end and a cms for quick edits -->
-<!-- this could allow designers who like to code (like me) to integrate raw html-->
----
-testimonial-carousel:
-  -
-    active-testimonial: HELLO
-    slider-content:
-      -
-        content: I am {{name}} and these people were awesome
-        name: this person
-      -
-        content: I am {{name}} and these people were awesome
-        name: this person
-      -
-        content: I am {{name}} and these people were awesome
-        name: this person
-      -
-        feature: I am {{name}} and these people were awesome
-        name: this person
-data-pricing-table:
-  -
-    title: Basic
-    price: $9.99
-    features:
-      -
-        feature: Feature 1
-        availability: fi-check
-      -
-        feature: Feature 2
-        availability: fi-x
-      -
-        feature: Feature 3
-        availability: fi-x
-      -
-        feature: Feature 4
-        availability: fi-x
-  -
-    title: Popular
-    price: $19.99
-    features:
-      -
-        feature: Feature 1
-        availability: fi-check
-      -
-        feature: Feature 2
-        availability: fi-check
-      -
-        feature: Feature 3
-        availability: fi-x
-      -
-        feature: Feature 4
-        availability: fi-x
-  -
-    title: Premier
-    price: $29.99
-    features:
-      -
-        feature: Feature 1
-        availability: fi-check
-      -
-        feature: Feature 2
-        availability: fi-check
-      -
-        feature: Feature 3
-        availability: fi-check
-      -
-        feature: Feature 4
-        availability: fi-check
 ---
 
-{{>content-bgvideo}}
+---
+
+<!-- <div class="row bg-image"> -->
+  <div class="container">
+    <div class="photo"></div>
+    <div class="photo"></div>
+    <div class="photo"></div>
+<!--     <img class='photo'  src="https://images.unsplash.com/photo-1430931071372-38127bd472b8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=474ca2203676095ec5ef8574ae5001db" alt="" />
+    <img class='photo'  src="https://images.unsplash.com/photo-1416453072034-c8dbfa2856b5?crop=entropy&dpr=2&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=825" alt="" />
+    <img class='photo'  src="https://images.unsplash.com/photo-1445012973386-d2fa141ff003?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=5b1de5ff6878affd258f13be6500472b" alt="" />
+    <img class='photo'  src="http://farm9.staticflickr.com/8241/8562523343_9bb49b7b7b.jpg" alt="" />
+ -->
+  </div>
+<!-- </div> -->
 
 
-<div class="pricing-table-container row">
-  {{>data-pricing-table}}
+
+<div class="location-row row full-row">
+  <div class="quad bg-light">
+    <p class="location white-txt text-center ">this</p>
+    <p class="address text-center white-txt">this</p>
+    <p class="phone white-txt text-center">000.000.0000</p>
+  </div>
+  <div class="quad bg-dark">
+    <p class="location white-txt text-center ">this</p>
+    <p class="address text-center white-txt">this</p>
+    <p class="phone white-txt text-center">000.000.0000</p>
+  </div>
+  <div class="quad bg-mid">
+    <p class="location white-txt text-center ">this</p>
+    <p class="address text-center white-txt">this</p>
+    <p class="phone white-txt text-center">000.000.0000</p>
+  </div>
+  <div class="quad bg-light">
+    <p class="location white-txt text-center ">this</p>
+    <p class="address text-center white-txt">this</p>
+    <p class="phone white-txt text-center">000.000.0000</p>
+  </div>
 </div>
 
-{{>morphing-newsletter}}
+<div class="row full-row history-row">
+  <p class="text-center small-3 small-centered columns white-txt">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+</div>
 
-<div class="col-3-container">
+<div class="row full-row bg-image-2">
+  <p class="text-center small-3 small-centered columns white-txt text-menu">MENU</p>
+</div>
+
+
+<div class="location-row row full-row">
+  <div class="quad bg-dark">
+    <p href="#" class="text-center white-txt quad-text">OUR STORY</p>
+  </div>
+  <div class="quad bg-pink">
+    <p href="#" class="text-center white-txt quad-text">LOCATIONS</p>
+  </div>
+  <div class="quad bg-white">
+    <p href="#" class="text-center quad-text">TAKEAWAY</p>
+  </div>
+  <div class="quad bg-mid">
+    <p href="#" class="text-center white-txt quad-text">CATERING</p>
+  </div>
+</div>
+
+
+
+<div class="row join-cta">
   <div class="row">
-
-    <div class="columns medium-4 col-left">
-      <div class="service">
-        <div class="service-icon-box">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/SpaceX_CRS-3.png/360px-SpaceX_CRS-3.png" alt="" class="service-icon">
-        </div>
-        <h4 class="service-heading">Interstellar Travel</h4>
-        <p class="service-description">It has been a very busy few months for the Project Voyager team.</p>
-      </div>
+    <h2 class="title-cta">JOIN lorem ipsum </h2>
+  </div>
+  <div class="row">
+    <p class=" description-cta">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+    <div class="social-icons-row">
+      <a href="" class="round-icons"><i class="fi-social-twiiter large-icon"></i></a>
+      <a href="" class="round-icons"><i class="fi-social-instagram large-icon"></i></a>
+      <a href="" class="round-icons"><i class="fi-social-facebook large-icon"></i></a>
     </div>
-
-    <div class="columns medium-4 col-mid">
-      <div class="service">
-        <div class="service-icon-box">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/SpaceX_CRS-3.png/360px-SpaceX_CRS-3.png" alt="" class="service-icon">
-        </div>
-        <h4 class="service-heading">Interstellar Travel</h4>
-        <p class="service-description">It has been a very busy few months for the Project Voyager team.</p>
-      </div>
-    </div>
-
-    <div class="columns medium-4 col-right">
-      <div class="service">
-        <div class="service-icon-box">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/SpaceX_CRS-3.png/360px-SpaceX_CRS-3.png" alt="" class="service-icon">
-        </div>
-        <h4 class="service-heading">Interstellar Travel</h4>
-        <p class="service-description">It has been a very busy few months for the Project Voyager team.</p>
-      </div>
-    </div>
-
-
   </div>
 </div>
