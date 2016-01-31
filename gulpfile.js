@@ -7,6 +7,9 @@ var rimraf   = require('rimraf');
 var sequence = require('run-sequence');
 var sherpa   = require('style-sherpa');
 var webpack  = require('webpack-stream');
+var imageResize = require('gulp-image-resize');
+var rename = require("gulp-rename");
+var imagemin = require('gulp-imagemin');
 // var ghPages = require('gulp-gh-pages');
 
 // Check for --production flag
@@ -189,6 +192,46 @@ gulp.task('images', function() {
     .pipe(imagemin)
     .pipe(gulp.dest('dist/assets/img'))
     .on('finish', browser.reload);
+});
+
+
+// Decsription
+//    SMALL - 320 
+//    MEDIUM - 480 
+//    LARGE - 1960
+var allImgs = './src/assets/img/*.{jpeg,jpg,png,svg}';
+var testImgs = './src/assets/img/motion-water-03.jpeg';
+gulp.task('responsive-images', function() {
+  gulp.src(testImgs)
+    .pipe(imageResize({ width: 1920 }))
+    .pipe(rename({suffix: '@large'}))
+    // .pipe(imagemin({progressive: true}))
+    .pipe(gulp.dest('src/assets/img/interchange')) // move this line to before the gulp.dest
+
+  gulp.src('./src/assets/img/motion-water-03.jpeg')
+    .pipe(rename({suffix: '@medium'}))
+    .pipe(imageResize({ width: 480 }))
+    // .pipe(imagemin({progressive: true}))
+    .pipe(gulp.dest('src/assets/img/interchange')) 
+
+  gulp.src('./src/assets/img/motion-water-03.jpeg')
+    .pipe(rename(
+      {
+        // basename: "aloha",
+        // prefix: "@large@medium",
+        suffix: '@small'
+      }
+    ))
+    .pipe(imageResize({ width: 320 }))
+    // .pipe(imagemin({progressive: true}))
+    .pipe(gulp.dest('./src/assets/img/interchange'));
+});
+
+gulp.task('clean-images', function(done) {
+  rimraf('src/assets/img/interchange', done);
+});
+gulp.task('interchange', function(done) {
+  sequence('clean-images', ['responsive-images', 'images'], done);
 });
 
 // Build the "dist" folder by running all of the above tasks
