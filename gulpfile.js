@@ -9,7 +9,7 @@ var sherpa   = require('style-sherpa');
 var webpack  = require('webpack-stream');
 var imageResize = require('gulp-image-resize');
 var rename = require("gulp-rename");
-var imagemin = require('gulp-imagemin');
+// var imagemin = require('gulp-imagemin');
 // var ghPages = require('gulp-gh-pages');
 
 // Check for --production flag
@@ -195,41 +195,37 @@ gulp.task('images', function() {
 });
 
 
-// Decsription
+// INTERCHANGE task will dynamically resize all the images and rename them 
+// which means you can go tell those non-coder "designers" to get off photoshop
+// and go ahead and pickup (s)css.
 //    SMALL - 320 
 //    MEDIUM - 480 
 //    LARGE - 1960
-var allImgs = './src/assets/img/*.{jpeg,jpg,png,svg}';
-var testImgs = './src/assets/img/motion-water-03.jpeg';
-gulp.task('responsive-images', function() {
-  gulp.src(testImgs)
-    .pipe(imageResize({ width: 1920 }))
-    .pipe(rename({suffix: '@large'}))
-    // .pipe(imagemin({progressive: true}))
-    .pipe(gulp.dest('src/assets/img/interchange')) // move this line to before the gulp.dest
+  var allImgs = './src/assets/img/*.{jpeg,jpg,png,svg}';
+  var testImgs = './src/assets/img/motion-water-03.jpeg';
+  gulp.task('responsive-images', function() {
+    gulp.src(allImgs)
+      .pipe(imageResize({ width: 920 }))
+      .pipe(rename({suffix: '@large'}))
+      // .pipe(imagemin({progressive: true}))
+      .pipe(gulp.dest('src/assets/img/interchange')) // move this line to before the gulp.dest
 
-  gulp.src('./src/assets/img/motion-water-03.jpeg')
-    .pipe(rename({suffix: '@medium'}))
-    .pipe(imageResize({ width: 480 }))
-    // .pipe(imagemin({progressive: true}))
-    .pipe(gulp.dest('src/assets/img/interchange')) 
+    gulp.src(allImgs)
+      .pipe(rename({suffix: '@medium'}))
+      .pipe(imageResize({ width: 480 }))
+      // .pipe(imagemin({progressive: true}))
+      .pipe(gulp.dest('src/assets/img/interchange')) 
 
-  gulp.src('./src/assets/img/motion-water-03.jpeg')
-    .pipe(rename(
-      {
-        // basename: "aloha",
-        // prefix: "@large@medium",
-        suffix: '@small'
-      }
-    ))
-    .pipe(imageResize({ width: 320 }))
-    // .pipe(imagemin({progressive: true}))
-    .pipe(gulp.dest('./src/assets/img/interchange'));
-});
+    gulp.src(allImgs)
+      .pipe(rename({suffix: '@small'}))
+      .pipe(imageResize({ width: 320 }))
+      // .pipe(imagemin({progressive: true}))
+      .pipe(gulp.dest('./src/assets/img/interchange'));
+  });
 
-gulp.task('clean-images', function(done) {
-  rimraf('src/assets/img/interchange', done);
-});
+  gulp.task('clean-images', function(done) {
+    rimraf('src/assets/img/interchange', done);
+  });
 gulp.task('interchange', function(done) {
   sequence('clean-images', ['responsive-images', 'images'], done);
 });

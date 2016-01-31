@@ -6,6 +6,17 @@ This template is built off the shoulders off gaints. I just refactored the code 
 - Image Optimination tasks for interchange (requires mac)
 - Built-in BrowserSync server
 
+## INTERCHANGE with Gulp
+This is just an expirement right now and ONLY works on MAC as far as I know...
+- brew install imagemagick
+- brew install graphicsmagick
+- npm install --save-dev gulp-image-resize && gulp-rename
+- var imageResize = require('gulp-image-resize');
+- var rename = require("gulp-rename");
+  - Improvements (In Progress)
+	- Sprite PNG and SVGS, generate sprite scss sheet
+	- base64 option
+
 ## Under Development 
 (Code being refactored, themed or otherwise rewritten)
 - Custom Components:
