@@ -30,8 +30,8 @@ This is just an expirement right now and ONLY works on MAC as far as I know...
   - Text Animations
   - Navigation Patterns (mostly done).
 
-
-
+## UI / UX Elements 
+![test](https://raw.github.com/HansUXdev/Motion-template/blob/master/ui-2.gif)
 
 
 ## Installation

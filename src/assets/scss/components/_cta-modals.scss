@@ -1,0 +1,114 @@
+.quad{
+	&.bg-light{ 
+		background: url('/assets/img/forest-Ratuszniak.jpeg') no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+
+.cta-modal-1.show{
+	background: url('/assets/img/forest-Ratuszniak.jpeg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	.modal-title{
+		font-size: 5rem;
+	    font-weight: bold;
+	}
+	
+	.quote-box{
+		padding: 1em;
+		background-color: rgba(191, 180, 180, 0.53);
+		.quote{
+			font-size: 5rem;
+		    font-style: italic;
+	        font-family: "Homemade Apple", cursive;
+		}
+	}
+}
+
+
+
+
+
+.cta-modal{
+	// When the modal is open
+	&.open{
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+	.modal--1{
+		background: url('/assets/img/forest-Ratuszniak.jpeg') no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;	
+	}
+}
+
+
+	.modal {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 40px;
+		/*background: #c8822a;*/
+		color: white;
+		z-index: 1;
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+	        	transition: 200ms ease;
+			overflow: auto;
+	}
+
+	.modal-close-btn {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		/*background: url(img/close.png) no-repeat center;*/
+		width: 32px;
+		height: 32px;
+		padding: 32px;
+		opacity: 0.8;
+		cursor: pointer;
+		transition: 0.3s ease;
+	}
+	.modal-close-btn:before {
+		content: "\f217";
+	    font-family: "foundation-icons";
+	    font-size: 3rem;
+	}
+	.modal-close-btn:hover {
+		opacity: 1;
+	}
+
+	.modal--1 { 
+		// background: #282019; 
+	}	
+	.modal--2 { 
+		background: #282019; 
+	}
+	.modal--3 { 
+		background: #535c27; 
+	}
+	.modal--4 { 
+		background: #c8822a; 
+	}
+	.modal--5 { 
+		background: #362A6C; 
+	}
+	.modal.show {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}

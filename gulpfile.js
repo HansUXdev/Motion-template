@@ -98,13 +98,13 @@ var INTERCHANGE = {
     './src/assets/img/waterfall3.jpeg'
   ],
   small: [
-    './src/assets/img/sit.{jpeg,jpg,png,svg}'
+    './src/assets/img/*.{jpeg,jpg,png,svg}'
   ],
   medium: [
-    './src/assets/img/sit.{jpeg,jpg,png,svg}'
+    './src/assets/img/*.{jpeg,jpg,png,svg}'
   ],
   large: [
-    './src/assets/img/sit.{jpeg,jpg,png,svg}'
+    './src/assets/img/*.{jpeg,jpg,png,svg}'
   ],
   xsmall: ['320'],
   xmedium: ['480'],
@@ -139,14 +139,14 @@ var INTERCHANGE = {
     // or write it differently / more efficiently?
     gulp.src(INTERCHANGE.small)
       .pipe(rename({suffix: '@small'}))
-      .pipe(imageResize({ width: INTERCHANGE.xlarge }))
+      .pipe(imageResize({ width: INTERCHANGE.xsmall }))
       .pipe(gulp.dest('./dist/assets/img/interchange'));
     gulp.src(INTERCHANGE.medium)
       .pipe(rename({suffix: '@medium'}))
       .pipe(imageResize({ width: INTERCHANGE.xmedium }))
       .pipe(gulp.dest('./dist/assets/img/interchange')) 
     gulp.src(INTERCHANGE.large)
-      .pipe(imageResize({ width: INTERCHANGE.xsmall }))
+      .pipe(imageResize({ width: INTERCHANGE.xlarge }))
       .pipe(rename({suffix: '@large'}))
       .pipe(gulp.dest('./dist/assets/img/interchange'))
   });

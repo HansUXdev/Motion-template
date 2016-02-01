@@ -1,55 +1,46 @@
-<style>
 
-		.modal {
-			position: fixed;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			padding: 40px;
-			/*background: #c8822a;*/
-			color: white;
-			z-index: 1;
-			visibility: hidden;
-			opacity: 0;
-			pointer-events: none;
-                	transition: 200ms ease;
-        		overflow: auto;
-		}
+	<div class="cta-modal-1  modal  ">
+		<span class="modal-close-btn"></span>
+		<h1 class="text-center modal-title">Visual Continuity</h1>
 
-		.modal-close-btn {
-			display: block;
-			position: absolute;
-			top: 0;
-			right: 0;
-			/*background: url(img/close.png) no-repeat center;*/
-			width: 32px;
-			height: 32px;
-			padding: 32px;
-			opacity: 0.8;
-			cursor: pointer;
-			transition: 0.3s ease;
-		}
-		.modal-close-btn:before {
-			content: "\f217";
-		    font-family: "foundation-icons";
-	        font-size: 3rem;
-		}
-		.modal-close-btn:hover {
-			opacity: 1;
-		}
-		.modal--2 { background: #282019; }
-		.modal--3 { background: #535c27; }
-		.modal--4 { background: #c8822a; }
-		.modal--5 { background: #362A6C; }
-		.modal.show {
-			opacity: 1;
-			visibility: visible;
-			pointer-events: auto;
-		}
-</style>
+		<div class="quote-box">
+			<div class="quote-box__bubble">
+				<div class="quote">"</div>
+				Transitioning between two visual states should be clear, smooth and effortless and not confuse the user. A well-designed transition does the heavy lifting and enables the user to clearly understand where their attention should be focused.
+				<div class="quote">"</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="cta-modal-2  modal  ">
+		<span class="modal-close-btn"></span>
+		<h1>Share it if you like it</h1>
+		<br><br>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-via="chinchang457" data-related="chinchang457" data-hashtags="animate,javascript">Tweet</a>
+	</div>
+	<div class="cta-modal-3  modal  ">
+		<span class="modal-close-btn"></span>
+		<h1>Customary cat!</h1>
+		<img src="img/cat.jpg" width="300" alt="">
+		<p>You found me :)</p>
+	</div>
+	<div class="cta-modal-4  modal  ">
+		<span class="modal-close-btn"></span>
+
+		<h1>Hierarchical timing</h1>
+		<div class="quote-box">
+			<div class="quote-box__bubble">When building a transition, consider the order and timing of the elements' movement. Ensure that motion supports the information hierarchy, conveying what content is most important by creating a path for the eye to follow.</div>
+			<a href="http://www.google.co.in/design/spec/animation/meaningful-transitions.html#meaningful-transitions-hierarchical-timing">Google Material design</a>
+		</div>
+	</div>
+
+
+
+
 <script>
-	    var closeFn;
+    var closeFn;
     function closeShowingModal() {
       var showingModal = document.querySelector('.modal.show');
       if (!showingModal) return;
@@ -82,33 +73,3 @@
       }
     })
 </script>
-		<div class="js-modal-1  modal  bg-light">
-			<span class="modal-close-btn"></span>
-			<h1>Visual Continuity</h1>
-
-			<div class="quote-box">
-				<div class="quote-box__bubble">Transitioning between two visual states should be clear, smooth and effortless and not confuse the user. A well-designed transition does the heavy lifting and enables the user to clearly understand where their attention should be focused.</div>
-				<a href="http://www.google.co.in/design/spec/animation/meaningful-transitions.html#meaningful-transitions-visual-continuity">Google Material design</a>
-			</div>
-		</div>
-		<div class="js-modal-2  modal  bg-dark">
-			<span class="modal-close-btn"></span>
-			<h1>Share it if you like it</h1>
-			<br><br>
-			<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-via="chinchang457" data-related="chinchang457" data-hashtags="animate,javascript">Tweet</a>
-		</div>
-		<div class="js-modal-3  modal  bg-mid">
-			<span class="modal-close-btn"></span>
-			<h1>Customary cat!</h1>
-			<img src="img/cat.jpg" width="300" alt="">
-			<p>You found me :)</p>
-		</div>
-		<div class="js-modal-4  modal  bg-light">
-			<span class="modal-close-btn"></span>
-
-			<h1>Hierarchical timing</h1>
-			<div class="quote-box">
-				<div class="quote-box__bubble">When building a transition, consider the order and timing of the elements' movement. Ensure that motion supports the information hierarchy, conveying what content is most important by creating a path for the eye to follow.</div>
-				<a href="http://www.google.co.in/design/spec/animation/meaningful-transitions.html#meaningful-transitions-hierarchical-timing">Google Material design</a>
-			</div>
-		</div>
