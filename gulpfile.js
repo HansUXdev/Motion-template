@@ -9,7 +9,6 @@ var sherpa   = require('style-sherpa');
 var webpack  = require('webpack-stream');
 var imageResize = require('gulp-image-resize');
 var rename = require("gulp-rename");
-// var imagemin = require('gulp-imagemin');
 // var ghPages = require('gulp-gh-pages');
 
 // Check for --production flag
@@ -59,7 +58,7 @@ var PATHS = {
     'bower_components/foundation-sites/js/foundation.toggler.js',
     'bower_components/foundation-sites/js/foundation.tooltip.js',
     //
-    'bower_components/cta/dist/cta.min.js',
+    'bower_components/cta/dist/cta.js',
     'bower_components/waypoints/lib/jquery.waypoints.min.js',
     'bower_components/flexslider/jquery.flexslider-min.js',
     
@@ -74,9 +73,83 @@ var PATHS = {
     // 'src/assets/js/**/*.js',
     'src/assets/js/app.js',
     'src/assets/js/signup.js'
-  ]
+  ],
 };
 
+
+// IMAGE sizes
+  // 75       // icons
+  // 100      // small
+  // 400x370  // medium
+  // 900x170 // responsive-ad
+  // 2000x750 - for obit
+  // blog - 850w x 350h
+  // portfolio - 550 x 550
+  // large logo - 450 x 183
+var INTERCHANGE = {  
+  testimonial: [
+    './src/assets/img/field-girl.jpeg',
+    './src/assets/img/scarf-girl.jpeg',
+    './src/assets/img/scarf-girl2.jpeg'
+  ],
+  orbit: [
+    './src/assets/img/surf-relax.jpeg',
+    './src/assets/img/water-bubbles.jpeg',
+    './src/assets/img/waterfall3.jpeg'
+  ],
+  small: [
+    './src/assets/img/sit.{jpeg,jpg,png,svg}'
+  ],
+  medium: [
+    './src/assets/img/sit.{jpeg,jpg,png,svg}'
+  ],
+  large: [
+    './src/assets/img/sit.{jpeg,jpg,png,svg}'
+  ],
+  xsmall: ['320'],
+  xmedium: ['480'],
+  xlarge: ['920']
+};
+
+// INTERCHANGE task will dynamically resize all the images and rename them 
+// which means you can go tell those non-coder "designers" to get off photoshop
+// and go ahead and pickup (s)css.
+  gulp.task('interchange', function() {
+    // CUSTOM
+    // Use this for slider profile images
+    gulp.src(INTERCHANGE.testimonial)
+      .pipe(rename({suffix: '@testimonial'}))
+      .pipe(imageResize({ 
+        height: 75,
+        width: 75,
+        crop : true,
+      }))
+      .pipe(gulp.dest('./dist/assets/img/orbit'))
+    // Images in your orbit slider are always perfect
+    gulp.src(INTERCHANGE.orbit)
+      .pipe(rename({suffix: '@obit'}))
+      .pipe(imageResize({ 
+        height: 750,
+        width: 2000,
+        crop : true,
+      }))
+      .pipe(gulp.dest('./dist/assets/img/orbit'))
+    // By default
+    // NOTES: is there a way to loop through (INTERCHANGE) for each
+    // or write it differently / more efficiently?
+    gulp.src(INTERCHANGE.small)
+      .pipe(rename({suffix: '@small'}))
+      .pipe(imageResize({ width: INTERCHANGE.xlarge }))
+      .pipe(gulp.dest('./dist/assets/img/interchange'));
+    gulp.src(INTERCHANGE.medium)
+      .pipe(rename({suffix: '@medium'}))
+      .pipe(imageResize({ width: INTERCHANGE.xmedium }))
+      .pipe(gulp.dest('./dist/assets/img/interchange')) 
+    gulp.src(INTERCHANGE.large)
+      .pipe(imageResize({ width: INTERCHANGE.xsmall }))
+      .pipe(rename({suffix: '@large'}))
+      .pipe(gulp.dest('./dist/assets/img/interchange'))
+  });
 
 // gulp.task('deploy', function() {
 //   return gulp.src('./dist/**/**/*')
@@ -195,44 +268,9 @@ gulp.task('images', function() {
 });
 
 
-// INTERCHANGE task will dynamically resize all the images and rename them 
-// which means you can go tell those non-coder "designers" to get off photoshop
-// and go ahead and pickup (s)css.
-//    SMALL - 320 
-//    MEDIUM - 480 
-//    LARGE - 1960
-  var allImgs = './src/assets/img/*.{jpeg,jpg,png,svg}';
-  var testImgs = './src/assets/img/motion-water-03.jpeg';
-  gulp.task('responsive-images', function() {
-    gulp.src(allImgs)
-      .pipe(imageResize({ width: 920 }))
-      .pipe(rename({suffix: '@large'}))
-      // .pipe(imagemin({progressive: true}))
-      .pipe(gulp.dest('src/assets/img/interchange')) // move this line to before the gulp.dest
-
-    gulp.src(allImgs)
-      .pipe(rename({suffix: '@medium'}))
-      .pipe(imageResize({ width: 480 }))
-      // .pipe(imagemin({progressive: true}))
-      .pipe(gulp.dest('src/assets/img/interchange')) 
-
-    gulp.src(allImgs)
-      .pipe(rename({suffix: '@small'}))
-      .pipe(imageResize({ width: 320 }))
-      // .pipe(imagemin({progressive: true}))
-      .pipe(gulp.dest('./src/assets/img/interchange'));
-  });
-
-  gulp.task('clean-images', function(done) {
-    rimraf('src/assets/img/interchange', done);
-  });
-gulp.task('interchange', function(done) {
-  sequence('clean-images', ['responsive-images', 'images'], done);
-});
-
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(done) {
-  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'copy'], 'styleguide', done);
+  sequence('clean', ['pages', 'sass', 'javascript', 'interchange', 'images', 'copy'], 'styleguide', 'javascript', done);
 });
 
 // Start a server with LiveReload to preview the site in
@@ -249,6 +287,6 @@ gulp.task('default', ['build', 'server'], function() {
   gulp.watch(['src/{layouts,partials,helpers,data}/**/*'], ['pages:reset']);
   gulp.watch(['src/assets/scss/**/{*.scss, *.sass}'], ['sass']);
   gulp.watch(['src/assets/js/**/*.js'], ['javascript']);
-  gulp.watch(['src/assets/img/**/*'], ['images']);
+  gulp.watch(['src/assets/img/**/*'], ['images','interchange']);
   gulp.watch(['src/styleguide/**'], ['styleguide']);
 });
