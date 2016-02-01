@@ -392,17 +392,17 @@
         <p class="address text-center white-txt">this</p>
         <p class="phone white-txt text-center">000.000.0000</p>
       </div>
-      <div class="quad bg-dark" data-cta-target=".js-modal-1" data-disable-scroll=true>
+      <div class="quad bg-dark" data-cta-target=".js-modal-2" data-disable-scroll=true>
         <p class="location white-txt text-center ">this</p>
         <p class="address text-center white-txt">this</p>
         <p class="phone white-txt text-center">000.000.0000</p>
       </div>
-      <div class="quad bg-mid" data-cta-target=".js-modal-1" data-disable-scroll=true>
+      <div class="quad bg-mid" data-cta-target=".js-modal-3" data-disable-scroll=true>
         <p class="location white-txt text-center ">this</p>
         <p class="address text-center white-txt">this</p>
         <p class="phone white-txt text-center">000.000.0000</p>
       </div>
-      <div class="quad bg-light" data-cta-target=".js-modal-1" data-disable-scroll=true>
+      <div class="quad bg-light" data-cta-target=".js-modal-4" data-disable-scroll=true>
         <p class="location white-txt text-center ">this</p>
         <p class="address text-center white-txt">this</p>
         <p class="phone white-txt text-center">000.000.0000</p>
@@ -448,45 +448,6 @@
     </div>
     
     <style>
-    			.main-title {
-    			color: white;
-    			font-size: 100px;
-    		}
-    		.btn, .tile {
-    			display: inline-block;
-    			text-decoration: none;
-    			padding: 16px;
-    			background: #EA006F;
-    			color: white;
-    			opacity: 0.85;
-    			cursor: pointer;
-    			transition: 0.25s ease;
-    		}
-    		.download-btn {
-    			background: white;
-    			color: #3F51B5;
-    			font-size: 30px;
-    		}
-    		.btn--blue {
-    			background: #4A90E2;
-    		}
-    		.tile {
-    			width: 33.333%;
-    			float: left;
-    			height: 150px;
-    		}
-    		.tile-container {
-    			overflow: hidden;
-    		}
-    		.btn:hover,
-    		.tile:hover {
-    			opacity: 1;
-    		}
-    		.tile:nth-child(2) { background: #4A90E2; }
-    		.tile:nth-child(3) { background: #FFD200; }
-    		.tile:nth-child(4) { background: #4CBB47; }
-    		.tile:nth-child(5) { background: #362A6C; }
-    		.tile:nth-child(6) { background: #4CBB47; }
     
     		.modal {
     			position: fixed;
@@ -495,7 +456,7 @@
     			left: 0;
     			right: 0;
     			padding: 40px;
-    			background: #282019;
+    			/*background: #c8822a;*/
     			color: white;
     			z-index: 1;
     			visibility: hidden;
@@ -518,12 +479,17 @@
     			cursor: pointer;
     			transition: 0.3s ease;
     		}
+    		.modal-close-btn:before {
+    			content: "\f217";
+    		    font-family: "foundation-icons";
+    	        font-size: 3rem;
+    		}
     		.modal-close-btn:hover {
     			opacity: 1;
     		}
-    		.modal--2 { background: #4A90E2; }
-    		.modal--3 { background: #FFD200; }
-    		.modal--4 { background: #4CBB47; }
+    		.modal--2 { background: #282019; }
+    		.modal--3 { background: #535c27; }
+    		.modal--4 { background: #c8822a; }
     		.modal--5 { background: #362A6C; }
     		.modal.show {
     			opacity: 1;
@@ -565,7 +531,7 @@
           }
         })
     </script>
-    		<div class="js-modal-1  modal  modal--1">
+    		<div class="js-modal-1  modal  bg-light">
     			<span class="modal-close-btn"></span>
     			<h1>Visual Continuity</h1>
     
@@ -574,34 +540,25 @@
     				<a href="http://www.google.co.in/design/spec/animation/meaningful-transitions.html#meaningful-transitions-visual-continuity">Google Material design</a>
     			</div>
     		</div>
-    		<div class="js-modal-2  modal  modal--2">
+    		<div class="js-modal-2  modal  bg-dark">
     			<span class="modal-close-btn"></span>
     			<h1>Share it if you like it</h1>
     			<br><br>
     			<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-via="chinchang457" data-related="chinchang457" data-hashtags="animate,javascript">Tweet</a>
     		</div>
-    		<div class="js-modal-3  modal  modal--3">
+    		<div class="js-modal-3  modal  bg-mid">
     			<span class="modal-close-btn"></span>
     			<h1>Customary cat!</h1>
     			<img src="img/cat.jpg" width="300" alt="">
     			<p>You found me :)</p>
     		</div>
-    		<div class="js-modal-4  modal  modal--4">
+    		<div class="js-modal-4  modal  bg-light">
     			<span class="modal-close-btn"></span>
     
     			<h1>Hierarchical timing</h1>
     			<div class="quote-box">
     				<div class="quote-box__bubble">When building a transition, consider the order and timing of the elements' movement. Ensure that motion supports the information hierarchy, conveying what content is most important by creating a path for the eye to follow.</div>
     				<a href="http://www.google.co.in/design/spec/animation/meaningful-transitions.html#meaningful-transitions-hierarchical-timing">Google Material design</a>
-    			</div>
-    		</div>
-    		<div class="js-modal-5  modal  modal--5">
-    			<span class="modal-close-btn"></span>
-    
-    			<h1>Consistent choreography</h1>
-    			<div class="quote-box">
-    				<div class="quote-box__bubble">A well-choreographed app also provides teachable moments. When transitioning elements are coordinated, the user's understanding of the app grows. They "get" the app; they don't feel disoriented by the animation.</div>
-    				<a href="http://www.google.co.in/design/spec/animation/meaningful-transitions.html#meaningful-transitions-consistent-choreography">Google Material design</a>
     			</div>
     		</div>
     
