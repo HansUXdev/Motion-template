@@ -1,0 +1,113 @@
+<!-- just slowly testing this idea out... -->
+<!-- yml to json conversion should be for two-way data binding between the front end and a cms for quick edits -->
+<!-- this could allow designers who like to code (like me) to integrate raw html-->
+---
+layout: data
+
+js:
+  -
+    file: /assets/js/app.js
+css:
+  -
+    file: /assets/css/app.css
+  - 
+    file: https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css
+  -
+    file: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css
+
+testimonial-carousel:
+  -
+    active-testimonial: HELLO
+    slider-content:
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        content: I am {{name}} and these people were awesome
+        name: this person
+      -
+        feature: I am {{name}} and these people were awesome
+        name: this person
+data-pricing-table:
+  -
+    title: Basic
+    price: $9.99
+    animation: wp wp-5
+    features:
+      -
+        feature: Feature 1
+        availability: fi-check
+      -
+        feature: Feature 2
+        availability: fi-x
+      -
+        feature: Feature 3
+        availability: fi-x
+      -
+        feature: Feature 4
+        availability: fi-x
+  -
+    title: Popular
+    price: $19.99
+    animation: none
+    features:
+      -
+        feature: Feature 1
+        availability: fi-check
+      -
+        feature: Feature 2
+        availability: fi-check
+      -
+        feature: Feature 3
+        availability: fi-x
+      -
+        feature: Feature 4
+        availability: fi-x
+  -
+    title: Premier
+    price: $29.99
+    animation: wp wp-6
+    features:
+      -
+        feature: Feature 1
+        availability: fi-check
+      -
+        feature: Feature 2
+        availability: fi-check
+      -
+        feature: Feature 3
+        availability: fi-check
+      -
+        feature: Feature 4
+        availability: fi-check
+---
+{{>hero-test}}
+
+{{>pricing-table}}
+
+
+{{>morphing-newsletter}}
+
+{{>content-3col-hover}}
+
+{{>testimonial-slider}}
+
+{{>content-projects}}
+
+{{>content-history}}
+
+{{>content-bg-img}}
+
+{{>location-footer}}
+
+{{>cta-modal}}
+
+
+
+
+
+
+
