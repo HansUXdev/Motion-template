@@ -1,20 +1,35 @@
+$background-1: url('/assets/img/forest-Ratuszniak.jpeg');
+$background-2: url('/assets/img/surf-relax.jpeg');
+$background-3: url('/assets/img/surf-pov-RobBye.jpeg');
+$background-4: url('/assets/img/forest-Ratuszniak.jpeg');
+
 .quad{
 	&.bg-light{ 
-		background: url('/assets/img/forest-Ratuszniak.jpeg') no-repeat center center fixed; 
+		background: $background-1 no-repeat center center fixed; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+		transition: 200ms ease;
+	}
+	.bg-dark{
+		background: $background-2 no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		transition: 200ms ease;
 	}
 }
 
 
 .cta-modal-1.show{
-	background: url('/assets/img/forest-Ratuszniak.jpeg') no-repeat center center fixed; 
+	background: $background-1 no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	transition: 200ms ease;
 	
 	.modal-title{
 		font-size: 5rem;
@@ -95,16 +110,16 @@
 	.modal--1 { 
 		// background: #282019; 
 	}	
-	.modal--2 { 
+	.cta-modal-2.modal.show{ 
 		background: #282019; 
 	}
-	.modal--3 { 
+	.cta-modal-3.modal.show { 
 		background: #535c27; 
 	}
-	.modal--4 { 
+	.cta-modal-4.modal.show { 
 		background: #c8822a; 
 	}
-	.modal--5 { 
+	.cta-modal-5.modal.show { 
 		background: #362A6C; 
 	}
 	.modal.show {

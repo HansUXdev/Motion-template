@@ -1,0 +1,200 @@
+
+$to-top-bg: #495061;
+$nav-font-size: 13px;
+$accent-color: #FF5274;
+$white-color: #fff;
+$footer-primary: #3D4351;
+$footer-secondary: #373D4A;
+$footer-keyline-color: #4E566C;
+$txt-light: #fff;
+
+
+
+
+
+
+
+// Text colours
+$txt-primary: rgba(28, 54, 83, 0.6);
+// body font
+$txt-secondary: #3D4351;
+// heading font
+// header/hero
+$txt-accent: #ACB1B4;
+$form-placeholder: #BCC1C3;
+// form placeholder text
+// Global colours
+// global accent colour
+$accent-color-hover: #D7405D;
+// global accent colour hover
+$black-color: #000;
+// Typography colours
+$h2-color: #3D4351;
+$h3-color: #3D4351;
+$h5-color: #3D4351;
+// Layout colours
+$section-light: #fff;
+$section-dark: #F3F4F8;
+// Keylines
+$keyline-color: #E6E9EA;
+
+
+$sans-serif: 'Open Sans', sans-serif;
+$serif: Merriweather, Georgia, 'Times New Roman', serif;
+$accent-font: 'Nunito', sans-serif;
+
+// Weights
+
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+
+// Sizes
+
+$font-size-h1:60px;
+$font-size-h2:40px;
+$font-size-h3:24px;
+$font-size-h4:18px;
+$font-size-h5:15px;
+$font-size-p: 15px;
+$blog-post-title: 11px;
+
+// Responsive Sizes
+
+$responsive-h1:40px;
+
+// Line height
+
+$base-line-height: 29px;
+
+
+/* ==========================================================================
+To top
+========================================================================== */
+  .to-top {
+    height: 60px;
+    background-color: $to-top-bg;
+
+    .to-top-wrap {
+      height: 60px;
+      width: 70px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: $white-color;
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+      a:hover, a:focus {
+        background-color: rgba(0, 0, 0, 0.40);
+      }
+      i {
+        font-size: 30px;
+        line-height: 55px;
+      }
+    }
+    .row {
+      position: relative;
+    }
+  }
+
+/* ==========================================================================
+Footer
+========================================================================== */
+  footer {
+    background-color: $footer-primary;
+    position: relative;
+
+    p {
+      color: $txt-accent;
+      font-size: $nav-font-size;
+    }
+    a {
+      color: $txt-light;
+    }
+    a:hover {
+      color: $accent-color;
+    }
+    ul.footer-group {
+      border-top: solid 1px #4E566C;
+      padding-top: 25px;
+      margin-bottom: 45px;
+    }
+    ul.footer-group li {
+      display: inline-block;
+    }
+    ul.footer-group li a {
+      font-size: $nav-font-size;
+      text-transform: uppercase;
+    }
+    ul.footer-group li a:hover {
+      color: $accent-color;
+    }
+    ul.footer-group li {
+      margin-right: 30px;
+    }
+    ul.footer-group li:last-child {
+      margin-right: 0;
+    }
+    span.fa-heart {
+      color: #ff415c;
+      font-size: 15px;
+      margin: 0 2px;
+    }
+    .social-share {
+      position: absolute;
+      background-color: #373D4A;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      padding: 142px 0 0 70px;
+
+      p {
+        color: $txt-light;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+      }
+      a.twitter-share {
+        height: 60px;
+        width: 60px;
+        background-color: #1AB4EF;
+        border-radius: 3px;
+        font-size: 22px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 20px;
+      }
+      a.twitter-share:hover, a.twitter-share:focus {
+        background-color: #1590BF;
+      }
+      a.facebook-share:hover, a.facebook-share:focus {
+        background-color: #324C85;
+      }
+      a.facebook-share {
+        height: 60px;
+        width: 60px;
+        background-color: #3B5898;
+        border-radius: 3px;
+        font-size: 22px;
+        display: inline-block;
+        text-align: center;
+      }
+      a {
+        color: $txt-light;
+      }
+      a:hover {
+        color: $txt-light;
+      }
+      a i {
+        margin-top: 20px;
+      }
+    }
+    .footer-links {
+      margin: 120px 0 120px 0;
+    }
+  }

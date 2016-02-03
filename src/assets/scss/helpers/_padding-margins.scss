@@ -1,0 +1,31 @@
+@mixin padding-helpers{
+    // Create a list of helper classes for vertical and horizontal padding and margins
+    // Scale each class my 1em
+    $padding: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+    @for $i from 1 through length($padding) {
+        .padding-vh-#{$i} {
+            padding-top: (nth($padding, $i) + em) !important;
+            padding-bottom: (nth($padding, $i) + em) !important;
+        }
+        .padding-lr-#{$i} {
+            padding-left: (nth($padding, $i) + em) !important;
+            padding-right: (nth($padding, $i) + em) !important;
+        }
+    }
+}
+
+@mixin margin-helpers{
+    // Create a list of helper classes for vertical and horizontal padding and margins
+    // Scale each class my 1em
+    $padding: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+    @for $i from 1 through length($padding) {
+        .margin-vh-#{$i} {
+            margin-top: (nth($padding, $i) + em) !important;
+            margin-bottom: (nth($padding, $i) + em) !important;
+        }
+        .margin-lr-#{$i} {
+            margin-left: (nth($padding, $i) + em) !important;
+            margin-right: (nth($padding, $i) + em) !important;
+        }
+    }
+}
